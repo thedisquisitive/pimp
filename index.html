@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>PIMP</title>
+    </head>
+    <body>
+        <h1>Inventory</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>price</th>
+                <th>cost</th>
+                <th>stock</th>
+                <th>min stock</th>
+                <th>actions</th>
+            </tr>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.description }}</td>
+                <td>{{ item.price }}</td>
+                <td>{{ item.cost }}</td>
+                <td>{{ item.stock }}</td>
+                <td>{{ item.min_stock }}</td>
+                <td>
+                    <a href="/item/{{ item.id }}">view</a>
+                    <a href="/edit/{{ item.id }}">edit</a>
+                    <a href="/delete/{{ item.id }}">delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/add">Add new item</a>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Item</title>
+</head>
+<body>
+    <h1>Add Item</h1>
+    <form method="POST" action="/add">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="shortDesc">Short Description:</label>
+        <input type="text" id="shortDesc" name="shortDesc" required><br>
+        <label for="fullDesc">Full Description:</label>
+        <input type="text" id="fullDesc" name="fullDesc"><br>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required><br>
+        <label for="cost">Cost:</label>
+        <input type="number" id="cost" name="cost" required><br>
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" name="stock" required><br>
+        <label for="reorder">Minimum Stock:</label>
+        <input type="number" id="reorder" name="reorder" required><br>
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>
