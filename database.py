@@ -12,8 +12,8 @@ class Item(db.Model):
     shortDesc = db.Column(db.String(250))
     fullDesc = db.Column(db.String(1500))
 
-    price = db.Column(db.Double)
-    cost = db.Column(db.Double)
+    price = db.Column(db.Float(precision=2))
+    cost = db.Column(db.Float(precision=2))
 
     stock = db.Column(db.Integer)
     reorder = db.Column(db.Integer)

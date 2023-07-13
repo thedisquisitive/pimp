@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <title>PIMP</title>
+        <link rel="stylesheet" href="/static/style.css">
     </head>
     <body>
         <h1>Inventory</h1>
@@ -22,7 +23,7 @@
                 <td>{{ item.price }}</td>
                 <td>{{ item.cost }}</td>
                 <td>{{ item.stock }}</td>
-                <td>{{ item.min_stock }}</td>
+                <td>{{ item.reorder }}</td>
                 <td>
                     <a href="/item/{{ item.id }}">view</a>
                     <a href="/edit/{{ item.id }}">edit</a>
