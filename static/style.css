@@ -47,3 +47,12 @@ a {
 a:hover {
     background-color: darkgray;
 }   
+
+.addButton {
+    text-decoration: none;
+    color: black;
+    background-color: red;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0 auto;
+}

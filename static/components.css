@@ -1,0 +1,45 @@
+underline {
+    text-decoration: underline;
+}
+
+stageText {
+    color: white;
+    font-weight: bold;
+    font-size: small;
+}
+
+nik {
+    color:rgb(36, 36, 208);
+}
+
+.topBar {
+    height:22px;
+    background-color: rgb(36, 36, 208);
+    border-style: solid;
+    border-width: 1px !important;
+    border-top-width: 2px !important;
+    padding:1px;
+    padding-left:10px;
+}
+
+.topBarButton {
+    width: 22px;
+    height: 22px;
+    margin: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    margin:1px;
+}
+
+.navBar {
+    height:22px;
+    border-style: solid;
+    border-width: 1px !important;
+    border-bottom-width: 2px !important;
+}
+
+.noBorderButton {
+    background: none;
+    border: none;
+    margin:1px;
+}
