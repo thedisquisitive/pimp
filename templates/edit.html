@@ -10,25 +10,25 @@
     <h1>Edit Item</h1>
     <form method="POST" action="/edit/{{ item.id }}">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="{{ item.name }}" required><br>
+        <input type="text" class="textbox" id="name" name="name" value="{{ item.name }}" required><br>
 
         <label for="shortDesc">Short Description:</label>
-        <input type="text" id="shortDesc" name="shortDesc" value="{{ item.shortDesc }}" required><br>
+        <input type="text" class="textbox" id="shortDesc" name="shortDesc" value="{{ item.shortDesc }}" required><br>
 
         <label for="fullDesc">Full Description:</label>
-        <input type="text" id="fullDesc" name="fullDesc" value="{{ item.fullDesc }}" ><br>
+        <textarea class="textbox" id="fullDesc" name="fullDesc" rows="5" cols="40">{{ item.fullDesc }}</textarea><br>
 
         <label for="price">Price:</label>
-        <input type="number" id="price" name="price" step="any" maxlength=20 value="{{ item.price }}" required><br>
+        <input type="number" class="textbox" id="price" name="price" step="any" maxlength=20 value="{{ item.price }}" required><br>
 
         <label for="cost">Cost:</label>
-        <input type="number" id="cost" name="cost" step="any" maxlength=20 value="{{ item.cost }}" required><br>
+        <input type="number" class="textbox" id="cost" name="cost" step="any" maxlength=20 value="{{ item.cost }}" required><br>
 
         <label for="stock">Stock:</label>
-        <input type="number" id="stock" name="stock" maxlength=20 value="{{ item.stock }}" required><br>
+        <input type="number" class="textbox" id="stock" name="stock" maxlength=20 value="{{ item.stock }}" required><br>
 
         <label for="reorder">Minimum Stock:</label>
-        <input type="number" id="reorder" name="reorder" maxlength=20 value="{{ item.reorder }}" required><br>
+        <input type="number" class="textbox" id="reorder" name="reorder" maxlength=20 value="{{ item.reorder }}" required><br>
 
         <input type="submit" value="Update">
     </form>
