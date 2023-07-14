@@ -2,9 +2,7 @@
 <html>
 <head>
     <title>Edit Item</title>
-    <link rel="stylesheet" href="/static/app.css">
-        <link rel="stylesheet" href="/static/components.css">
-        <link rel="stylesheet" href="/static/pages.css">
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
     <h1>Edit Item</h1>
@@ -30,6 +28,7 @@
         <label for="reorder">Minimum Stock:</label>
         <input type="number" class="textbox" id="reorder" name="reorder" maxlength=20 value="{{ item.reorder }}" required><br>
 
+        <br>
         <input type="submit" value="Update">
     </form>
 </body>

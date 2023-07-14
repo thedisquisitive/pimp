@@ -18,7 +18,7 @@
                 <th>actions</th>
             </tr>
             {% for item in items %}
-            <tr>
+            <tr class="itemRow">
                 <td>{{ item.name }}</td>
                 <td>{{ item.shortDesc }}</td>
                 <td>{{ item.price }}</td>
@@ -26,14 +26,15 @@
                 <td>{{ item.stock }}</td>
                 <td>{{ item.reorder }}</td>
                 <td>
-                    <a class="button" href="/item/{{ item.id }}">view</a>
-                    <a class="button" href="/edit/{{ item.id }}">edit</a>
-                    <a class="button" href="/delete/{{ item.id }}">delete</a>
+                    <a class="linkButton" href="/item/{{ item.id }}">view</a>
+                    <a class="linkButton" href="/edit/{{ item.id }}">edit</a>
+                    <a class="linkButton" href="/delete/{{ item.id }}">delete</a>
                 </td>
             </tr>
             {% endfor %}
         </table>
-        <a class="button" href="/add">Add new item</a>
+        <br><br>
+        <a class="linkButton" href="/add">Add new item</a>
     
     </body>
 </html>
