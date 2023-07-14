@@ -11,32 +11,24 @@
             <tr>
                 <th>Name</th>
                 <th>Description</th>
-                <th>price</th>
-                <th>cost</th>
-                <th>stock</th>
-                <th>min stock</th>
-                <th>actions</th>
+                <th>Stock</th>
+                <th>Min Stock</th>
+                <th>Order Amount</th>
             </tr>
             {% for item in items %}
+            {% if item.stock < item.reorder %}
             <tr class="itemRow">
                 <td>{{ item.name }}</td>
                 <td>{{ item.shortDesc }}</td>
-                <td>{{ item.price }}</td>
-                <td>{{ item.cost }}</td>
                 <td>{{ item.stock }}</td>
                 <td>{{ item.reorder }}</td>
-                <td>
-                    <!-- <a class="linkButton" href="/item/{{ item.id }}">view</a> -->
-                    <a class="linkButton" href="/edit/{{ item.id }}">edit</a>
-                    <a class="linkButton" href="/delete/{{ item.id }}">delete</a>
-                </td>
+                <td>{{ item.reorder - item.stock }}</td>
             </tr>
+            {% endif %}
             {% endfor %}
         </table>
         <br><br>
-        <a class="linkButton" href="/add">Add new item</a>
-        <br><br>
-        <a class="linkButton" href="/report">Generate Order Sheet</a>
+        <a class="linkButton" href="/">Return Home</a>
     
     </body>
 

@@ -63,6 +63,11 @@ def delete_item(id):
     db.session.commit()
     return redirect(url_for('index'))
 
+@app.route('/report')
+def report():
+    items = Item.query.all()
+    return render_template('report.html', items=items)
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
