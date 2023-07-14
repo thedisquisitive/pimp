@@ -6,33 +6,32 @@
     </head>
     <body>
         
-        <h1>Inventory</h1>
+        <h1>Inventory Order Sheet</h1>
         <table>
             <tr>
+                <th>Category</th>
                 <th>Name</th>
                 <th>Description</th>
-                <th>Stock</th>
-                <th>Min Stock</th>
                 <th>Order Amount</th>
             </tr>
             {% for item in items %}
             {% if item.stock < item.reorder %}
             <tr class="itemRow">
+                <td>{{ item.category }}</td>
                 <td>{{ item.name }}</td>
                 <td>{{ item.shortDesc }}</td>
-                <td>{{ item.stock }}</td>
-                <td>{{ item.reorder }}</td>
                 <td>{{ item.reorder - item.stock }}</td>
             </tr>
             {% endif %}
             {% endfor %}
         </table>
         <br><br>
-        <a class="linkButton" href="/">Return Home</a>
+        
     
     </body>
 
-    <footer>
+    <footer class="noPrint">
+        <a class="linkButton" href="/">Return Home</a>
         <p>Created by: Z. Hogarth, 2023</p>
         <p>Version 0.0.1 Alpha</p>
     </footer>

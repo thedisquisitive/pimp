@@ -11,6 +11,7 @@ class Item(db.Model):
     name = db.Column(db.String(100))
     shortDesc = db.Column(db.String(250))
     fullDesc = db.Column(db.String(1500))
+    category = db.Column(db.String(100))
 
     price = db.Column(db.Float(precision=2))
     cost = db.Column(db.Float(precision=2))
@@ -23,7 +24,7 @@ class Item(db.Model):
     
 @app.route('/')
 def index():
-    items = Item.query.all()
+    items = db.session.query(Item).order_by(Item.category.asc())
     return render_template('index.html', items=items)
 
 @app.route('/add', methods=['GET', 'POST'])
@@ -32,11 +33,12 @@ def add_item():
         name = request.form['name']
         shortDesc = request.form['shortDesc']
         fullDesc = request.form['fullDesc']
+        category = request.form['category']
         price = request.form['price']
         cost = request.form['cost']
         stock = request.form['stock']
         reorder = request.form['reorder']
-        db.session.add(Item(name=name, shortDesc=shortDesc, fullDesc=fullDesc, price=price, cost=cost, stock=stock, reorder=reorder))
+        db.session.add(Item(name=name, shortDesc=shortDesc, fullDesc=fullDesc, category=category, price=price, cost=cost, stock=stock, reorder=reorder))
         db.session.commit()
         return redirect(url_for('index'))
     return render_template('add.html')
@@ -48,6 +50,7 @@ def edit_item(id):
         item.name = request.form['name']
         item.shortDesc = request.form['shortDesc']
         item.fullDesc = request.form['fullDesc']
+        item.category = request.form['category']
         item.price = request.form['price']
         item.cost = request.form['cost']
         item.stock = request.form['stock']
@@ -65,7 +68,7 @@ def delete_item(id):
 
 @app.route('/report')
 def report():
-    items = Item.query.all()
+    items = db.session.query(Item).order_by(Item.category.asc())
     return render_template('report.html', items=items)
 
 if __name__ == '__main__':

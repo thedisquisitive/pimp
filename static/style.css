@@ -93,3 +93,10 @@ input[type=submit]:hover {
   background-color: darkgray;
   color: white;
 }
+
+@media print {
+    .noPrint {
+        visibility: hidden;
+        display: none;
+    }
+}

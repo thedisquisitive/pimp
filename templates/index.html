@@ -9,6 +9,7 @@
         <h1>Inventory</h1>
         <table>
             <tr>
+                <th>Category</th>
                 <th>Name</th>
                 <th>Description</th>
                 <th>price</th>
@@ -19,6 +20,7 @@
             </tr>
             {% for item in items %}
             <tr class="itemRow">
+                <td>{{ item.category }}</td>
                 <td>{{ item.name }}</td>
                 <td>{{ item.shortDesc }}</td>
                 <td>{{ item.price }}</td>
