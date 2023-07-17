@@ -34,6 +34,10 @@ td {
     height: 40px;
 }
 
+tr:hover {
+    background-color: rgb(200, 200, 200);
+}
+
 tr:nth-child(odd) {
     background-color: rgb(230, 230, 230); 
 }
