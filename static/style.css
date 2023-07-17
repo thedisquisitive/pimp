@@ -34,13 +34,19 @@ td {
     height: 40px;
 }
 
+tr:nth-child(odd) {
+    background-color: rgb(230, 230, 230); 
+}
+
+tr:nth-child(odd):hover {
+    background-color: rgb(243, 188, 188);); 
+}
+
 tr:hover {
     background-color: rgb(243, 188, 188);
 }
 
-tr:nth-child(odd) {
-    background-color: rgb(230, 230, 230); 
-}
+
 
 .linkButton {
     border: 1px solid black;
