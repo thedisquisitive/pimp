@@ -11,6 +11,7 @@ body {
     background-color: whitesmoke;
     margin: 0 auto;
     padding: 2em;
+    border-radius: 15px;
 }
 
 table {
@@ -18,6 +19,7 @@ table {
     width: 80%;
     border-collapse: collapse;
     border: 1px solid black;
+    border-radius: 5px;
 }
 
 th {
@@ -32,8 +34,8 @@ td {
     height: 40px;
 }
 
-tr:nth-child(even) {
-    background-color: lightgray;
+tr:nth-child(odd) {
+    background-color: rgb(230, 230, 230); 
 }
 
 .linkButton {
@@ -49,6 +51,22 @@ tr:nth-child(even) {
 
 .linkButton:hover {
     background-color: darkgray;
+    color: white;
+}
+
+.delLinkButton {
+    border: 1px solid black;
+    background-color: darkred;
+    padding: 0.5em;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+}
+
+.delLinkButton:hover {
+    background-color: red;
     color: white;
 }
 
@@ -81,7 +99,6 @@ textarea {
 
 button {
   margin-top: 2rem;
-  reset: all;
 }
 
 button:hover {

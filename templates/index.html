@@ -12,11 +12,11 @@
                 <th>Category</th>
                 <th>Name</th>
                 <th>Description</th>
-                <th>price</th>
-                <th>cost</th>
-                <th>stock</th>
-                <th>min stock</th>
-                <th>actions</th>
+                <th>Price</th>
+                <th>Cost</th>
+                <th>Stock</th>
+                <th>Min Stock</th>
+                <th>Actions</th>
             </tr>
             {% for item in items %}
             <tr class="itemRow">
@@ -29,8 +29,8 @@
                 <td>{{ item.reorder }}</td>
                 <td>
                     <!-- <a class="linkButton" href="/item/{{ item.id }}">view</a> -->
-                    <a class="linkButton" href="/edit/{{ item.id }}">edit</a>
-                    <a class="linkButton" href="/delete/{{ item.id }}">delete</a>
+                    <a class="linkButton" href="/edit/{{ item.id }}">Edit</a>
+                    <a class="delLinkButton" href="/delete/{{ item.id }}">Delete</a>
                 </td>
             </tr>
             {% endfor %}
